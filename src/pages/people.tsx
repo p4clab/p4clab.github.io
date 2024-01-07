@@ -43,7 +43,6 @@ const PeopleItem = ({name, position, email, homepage, sitePath, picture}: {name:
                         </Link>
                 }
             </div>
-
         </div>
     )
 }

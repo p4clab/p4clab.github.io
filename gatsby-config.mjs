@@ -44,6 +44,31 @@ const config = {
     siteMetadata : {...SITE_METADATA},
     graphqlTypegen: true,
     plugins: [
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                "name": "images",
+                "path": `${__dirname}/src/images/`
+            },
+            __key: "images"
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                "name": "pages",
+                "path": `${__dirname}/src/pages/`
+            },
+            __key: "pages"
+        },
+
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                "name": "posts",
+                "path": `${__dirname}/posts/`
+            },
+            __key: "posts"
+        },
         "gatsby-plugin-postcss",
         "gatsby-plugin-image",
         "gatsby-plugin-sitemap",
@@ -68,31 +93,6 @@ const config = {
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp",
         {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                "name": "images",
-                "path": `${__dirname}/src/images/`
-            },
-            __key: "images"
-        },
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                "name": "pages",
-                "path": `${__dirname}/src/pages/`
-            },
-            __key: "pages"
-        },
-
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                "name": "posts",
-                "path": `${__dirname}/src/posts/`
-            },
-            __key: "posts"
-        },
-        {
             resolve: "gatsby-plugin-mdx",
             options: {
                 extensions: [
@@ -105,25 +105,23 @@ const config = {
                             maxWidth: 500
                         }
                     },
-
                 ],
                 mdxOptions: {
                     remarkPlugins: [
                         remarkGfm,
                         remarkMath,
                         remarkCopyLinkedFiles,
-                        [remarkExternalLinks, { target: '_blank' }]
+                        [remarkExternalLinks, { target: '__blank' }]
                     ],
                     rehypePlugins: [
                         rehypeSlug,
-                        rehypeKatex,
                         rehypeHighlight,
+                        rehypeKatex,
                         rehypeAutolinkHeadings,
                     ]
                 }
             },
-
-        },
+        }
     ]
 };
 export default config;

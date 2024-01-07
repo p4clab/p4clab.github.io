@@ -3,11 +3,10 @@ import slugify from "slugify";
 import moment from 'moment'
 import readingTime from 'reading-time'
 
-
 const TYPES = ['lectures', 'news', 'people', 'projects', 'publications', 'notice.mdx']
 
 const RE_TYPES = TYPES.reduce((res, item) => {
-    res[item]  = RegExp(`src/posts/${item}`)
+    res[item]  = RegExp(`/posts/${item}`)
     return res
 }, {})
 
@@ -56,24 +55,29 @@ export const createPages = async ({graphql, actions}) => {
     const { createPage } = actions
     const result = await graphql(`
         query createPages {
-            mark: allMdx {
+            allMdx {
                 nodes {
                     id
                     fields {
                         postType
                         sitePath
                     }
+                    internal {
+                        contentFilePath
+                    }
                 }
             }
         }
     `)
-    const { nodes } = result.data.mark
+    const { allMdx } = result.data
 
-    nodes.forEach(node => {
+    allMdx.nodes.forEach(node => {
+        const templatePath = path.resolve(`src/components/${node.fields.postType}-template.tsx`)
+
         if (node.fields.sitePath) {
             createPage({
                 path: node.fields.sitePath,
-                component: path.resolve(`src/components/${node.fields.postType}-template.tsx`),
+                component: `${templatePath}?__contentFilePath=${node.internal.contentFilePath}`,
                 context: {
                     id: node.id
                 }
