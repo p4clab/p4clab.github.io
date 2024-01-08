@@ -3,7 +3,7 @@ import slugify from "slugify";
 import moment from 'moment'
 import readingTime from 'reading-time'
 
-const TYPES = ['lectures', 'news', 'people', 'projects', 'publications', 'notice.mdx']
+const TYPES = ['lectures', 'news', 'people', 'projects', 'publications', 'notice.md']
 
 const RE_TYPES = TYPES.reduce((res, item) => {
     res[item]  = RegExp(`/posts/${item}`)
@@ -19,21 +19,21 @@ export const onCreateNode = async ({ node, actions}) => {
         let slug = ''
         switch (type) {
             case 'lectures':
-                slug = `${meta.year}/${meta.semester}/${meta.division}/${slugify(meta.title)}`
+                slug = `${meta.year}/${meta.semester}/${meta.division}/${slugify(meta.title, {remove: /[*+~.()'"!:@]/g})}`
                 break
             case 'news':
-                slug = `${moment(meta.dateTime, 'YYYY-MM-DD kk:mm:ss').format('YYYY-MM-DD')}/${slugify(meta.title)}`
+                slug = `${moment(meta.dateTime, 'YYYY-MM-DD kk:mm:ss').format('YYYY-MM-DD')}/${slugify(meta.title, {remove: /[*+~.()'"!:@]/g})}`
                 break
             case 'people':
                 slug = `${slugify(meta.email)}`
                 break
             case 'projects':
-                slug = `${moment(meta.startDate).format('YYYY-MM-DD')}/${slugify(meta.title)}`
+                slug = `${moment(meta.startDate).format('YYYY-MM-DD')}/${slugify(meta.title, {remove: /[*+~.()'"!:@]/g})}`
                 break
             case 'publications':
-                slug = `${moment(meta.date).format('YYYY-MM-DD')}/${slugify(meta.title)}`
+                slug = `${moment(meta.date).format('YYYY-MM-DD')}/${slugify(meta.title, {remove: /[*+~.()'"!:@]/g})}`
                 break
-            case 'notice.mdx':
+            case 'notice.md':
                 slug = 'notice'
                 break
         }

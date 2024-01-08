@@ -1,14 +1,13 @@
 import * as React from "react"
 import {graphql, Link, useStaticQuery} from "gatsby";
 import {
-    Flowbite, Footer, FooterIcon, FooterCopyright, FooterDivider,
-    Navbar, NavbarBrand, DarkThemeToggle, NavbarToggle, NavbarCollapse, NavbarLink, Banner, BannerCollapseButton,
+    Flowbite, DarkThemeToggle, Banner
 } from "flowbite-react";
 import {FaGithub, FaCalendarDays, FaBars} from "react-icons/fa6";
 import {MdAnnouncement, MdOutlineAlternateEmail} from "react-icons/md";
 import {SiResearchgate, SiGooglescholar} from "react-icons/si";
 import {StaticImage} from "gatsby-plugin-image";
-import {H4, H6, P, Span, SLink,} from "./typography";
+import {H4, H6, InnerLink, P, Span,} from "./typography";
 import { initFlowbite } from 'flowbite'
 import {useEffect} from "react";
 import {HiX} from "react-icons/hi";
@@ -71,9 +70,7 @@ const Layout = ({activeLink, children}: { activeLink?: string, children: React.R
                                     <P className="flex items-center text-sm">
                                         <MdAnnouncement className="mr-4 h-4 w-4"/>
                                         <Span>{mdx.frontmatter.title}&nbsp; </Span>
-                                        <Link to={mdx.fields.sitePath}>
-                                            <SLink>Read More</SLink>
-                                        </Link>
+                                        <InnerLink href={mdx.fields.sitePath}>Read More</InnerLink>
                                     </P>
                                 </div>
                                 <Banner.CollapseButton color="gray" className="border-0 bg-transparent text-gray-500 dark:text-gray-400">
@@ -122,7 +119,7 @@ const Layout = ({activeLink, children}: { activeLink?: string, children: React.R
                 </nav>
 
                 {/** Body **/}
-                <div className='max-w-screen-lg mx-auto px-6 pt-36'>
+                <div className='max-w-4xl mx-auto px-6 pb-24 pt-48 flex flex-col space-y-24'>
                     {children}
                 </div>
 
@@ -157,15 +154,15 @@ const Layout = ({activeLink, children}: { activeLink?: string, children: React.R
                                    className='text-gray-500 hover:text-gray-900 dark:hover:text-white'>
                                     <MdOutlineAlternateEmail className='h-5 w-5'/>
                                 </a>
-                                <a href={`${site.siteMetadata.github}`} target='__blank'
+                                <a href={`${site.siteMetadata.github}`} target='_blank'
                                    className='text-gray-500 hover:text-gray-900 dark:hover:text-white'>
                                     <FaGithub className='h-5 w-5'/>
                                 </a>
-                                <a href={`${site.siteMetadata.researchGate}`} target='__blank'
+                                <a href={`${site.siteMetadata.researchGate}`} target='_blank'
                                    className='text-gray-500 hover:text-gray-900 dark:hover:text-white'>
                                     <SiResearchgate className='h-5 w-5'/>
                                 </a>
-                                <a href={`${site.siteMetadata.googleScholar}`} target='__blank'
+                                <a href={`${site.siteMetadata.googleScholar}`} target='_blank'
                                    className='text-gray-500 hover:text-gray-900 dark:hover:text-white'>
                                     <SiGooglescholar className='h-5 w-5'/>
                                 </a>

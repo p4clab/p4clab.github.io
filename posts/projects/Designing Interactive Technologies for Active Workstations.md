@@ -4,5 +4,5 @@ funding: "National IT Industry Promotion Agency, Republic of Korea"
 startDate: 2015-09
 endDate: 2015-06
 description:
-thumbnail:
+thumbnail: './res/active-workstation.jpg'
 ---

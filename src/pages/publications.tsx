@@ -3,10 +3,9 @@ import {graphql, PageProps} from "gatsby";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
 import {Modal, ModalBody} from "flowbite-react";
-import {H6, Span, SLink, P} from "../components/typography";
+import {H6, Span, P, TextLink, A} from "../components/typography";
 import {FaArrowRight} from "react-icons/fa6";
 import LinkButton from "../components/link-button";
-import slugify from 'slugify'
 
 const PUB_TYPES = ['all', 'journal', 'conference', 'poster', 'patent']
 
@@ -85,6 +84,7 @@ const PublicationItem = ({
     ).join(',\n')
 
     const bibTex = `@${bibType}\{${bibKey},\n${bibItemsString}\n\}`
+
     return (
         <>
             <Modal popup show={openModal} onClose={() => setOpenModal(false)}>
@@ -94,35 +94,31 @@ const PublicationItem = ({
                 </ModalBody>
             </Modal>
 
-            <div className="flex items-start">
-                <div className='pt-4'>
-                    <Span className='text-sm mb-1 leading-none text-gray-400 dark:text-gray-500'>{date}</Span>
-                    <H6 className='capitalize items-center'>
-                        {title}
-                        <button onClick={() => setOpenModal(true)}><SLink className='text-sm ml-1'>[BIB]</SLink>
-                        </button>
-                    </H6>
-                    {authors &&
-                        <P className='text-sm mb-1'>{authors.join(', ')} </P>
-                    }
-                    {
-                        publisher &&
-                        <P className='text-sm italic mb-1'>
-                            {pubLine}
-                        </P>
-                    }
-                    {doi &&
-                        <P className='text-sm'>
-                            <a href={`https://doi.org/${doi}`} target='__blank'><SLink>DOI: {doi}</SLink></a>
-                        </P>
-                    }
-                    {words > 0 &&
-                        <LinkButton to={sitePath}>
-                            Read More
-                            <FaArrowRight className='ml-2 h-3 w-3'/>
-                        </LinkButton>
-                    }
-                </div>
+            <div className="flex flex-col items-start text-sm font-serif space-y-1">
+                <Span className='font-serif leading-none text-gray-400 dark:text-gray-500'>{date}</Span>
+                <H6 className='capitalize items-center font-sans'>
+                    {title}
+                    <button onClick={() => setOpenModal(true)}><TextLink className='text-sm ml-1'>[BIB]</TextLink>
+                    </button>
+                </H6>
+                {authors &&
+                    <Span className='leading-1'>{authors.join(', ')} </Span>
+                }
+                {
+                    publisher &&
+                    <Span className='italic'>
+                        {pubLine}
+                    </Span>
+                }
+                {doi &&
+                    <A href={`https://doi.org/${doi}`} className='font-serif'>DOI: {doi}</A>
+                }
+                {words > 0 &&
+                    <LinkButton to={sitePath}>
+                        Read More
+                        <FaArrowRight className='ml-2 h-3 w-3'/>
+                    </LinkButton>
+                }
             </div>
         </>
     )
@@ -130,25 +126,13 @@ const PublicationItem = ({
 
 const Publications = ({data}: PageProps<Queries.PublicationPageQuery>) => {
     const {publications} = data
-    const publicationsByType = publications.nodes.reduce((acc: Record<string, object[]>, node) => {
-        const type = node.frontmatter?.type || ''
-        if (acc[type]) {
-            acc[type].push(node)
-        } else {
-            acc[type] = [node]
-        }
-        return acc
-    }, {})
-
-
     const [tab, setTab] = useState('all')
 
     return (
         <Layout activeLink='publications'>
-            <div className='py-12 max-w-4xl mx-auto'>
+            <div>
                 <div className='sm:hidden'>
-                    <select id='tabs'
-                            className='capitalize bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                    <select className='capitalize bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                             onChange={(e) => setTab(e.target.value)}
                             defaultValue={'all'}
                             value={tab}
@@ -158,7 +142,7 @@ const Publications = ({data}: PageProps<Queries.PublicationPageQuery>) => {
                         }
                     </select>
                 </div>
-                <ul className="text-sm font-medium text-center text-gray-500 hidden sm:flex border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+                <ul className="text-base font-medium text-center text-gray-500 hidden sm:flex border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
                     {
                         PUB_TYPES.map(p =>
                             <li className="w-full">
@@ -174,7 +158,7 @@ const Publications = ({data}: PageProps<Queries.PublicationPageQuery>) => {
                         )
                     }
                 </ul>
-                <ul>
+                <ul className='mt-12 space-y-8'>
                     {
                         publications.nodes.filter(node =>
                             tab === 'all' ? true : node.frontmatter?.type === tab
@@ -200,6 +184,7 @@ const Publications = ({data}: PageProps<Queries.PublicationPageQuery>) => {
                     }
                 </ul>
             </div>
+
         </Layout>
     )
 

@@ -1,9 +1,8 @@
 import * as React from "react"
 import Seo from "../components/seo";
-import {graphql, Link, PageProps} from "gatsby";
+import {graphql, PageProps} from "gatsby";
 import Layout from "../components/layout";
 import {
-    Button,
     Card,
     Timeline,
     TimelineBody,
@@ -15,7 +14,7 @@ import {
 } from "flowbite-react";
 import { FaArrowRight, FaCalendar} from "react-icons/fa6";
 import {IoPerson, IoPhonePortraitSharp, IoSync, IoThumbsUpOutline} from "react-icons/io5";
-import {H1, H2, H4, H5, H6, P, Span} from "../components/typography";
+import {H1, H2, H4, H6, P, Span} from "../components/typography";
 import LinkButton from "../components/link-button";
 
 const Index = ({ data }: PageProps<Queries.IndexPageQuery>) => {
@@ -26,7 +25,7 @@ const Index = ({ data }: PageProps<Queries.IndexPageQuery>) => {
             {
                 /** About **/
             }
-            <div className='py-24'>
+            <div className='pt-12'>
                 <div className='mx-auto max-w-3xl md:text-center'>
                     <H1 className='tracking-tight text-gray-900 dark:text-primary-100'>
                         {site?.siteMetadata?.slogan}
@@ -82,7 +81,7 @@ const Index = ({ data }: PageProps<Queries.IndexPageQuery>) => {
             {
                 /** Recent Projects **/
             }
-            <div className='py-24'>
+            <div className=''>
                 <H2 className='text-center dark:text-primary-100'>Recent Projects</H2>
                 <Card className='mt-12'>
                     <div className='flow-root'>
@@ -105,7 +104,7 @@ const Index = ({ data }: PageProps<Queries.IndexPageQuery>) => {
             {
                 /** Latest News **/
             }
-            <div className='py-24'>
+            <div className=''>
                 <H2 className='text-center dark:text-primary-100'>Latest News</H2>
                 <Timeline className='mt-12'>
                     {news.nodes.map(node =>
@@ -131,7 +130,7 @@ const Index = ({ data }: PageProps<Queries.IndexPageQuery>) => {
     )
 }
 
-export const Head = () => <Seo title='Home'/>
+export const Head = () => <Seo/>
 
 export const pageQuery = graphql`
     query IndexPage {

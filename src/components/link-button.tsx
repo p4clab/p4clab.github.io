@@ -1,5 +1,4 @@
 import {Link} from "gatsby";
-import {FaArrowRight} from "react-icons/fa6";
 import * as React from "react";
 
 const LinkButton = ({to, children}: { to: string, children?: React.ReactNode }) =>

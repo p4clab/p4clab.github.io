@@ -4,5 +4,5 @@ funding: "Institute of Information & Communications Technology Planning & Evalua
 startDate: 2017-09 
 endDate: 2020-12
 description:
-thumbnail:
+thumbnail: './res/standup.png'
 ---

@@ -2,10 +2,10 @@
   "name": "p4c-lab",
   "version": "1.0.0",
   "private": true,
-  "description": "p4c-lab",
+  "description": "P4C Lab's official website",
   "author": "Woohyeok Choi",
   "keywords": [
-    "gatsby"
+    "P4C Lab"
   ],
   "scripts": {
     "develop": "gatsby develop",
@@ -13,13 +13,11 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "deploy": "gatsby build && gh-pages -d public",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@heroicons/react": "^2.1.1",
     "@mdx-js/react": "^2.3.0",
-    "@remark-embedder/core": "^3.0.2",
-    "@remark-embedder/transformer-oembed": "^3.0.0",
     "autoprefixer": "^10.4.16",
     "flowbite": "^2.2.1",
     "flowbite-react": "^0.7.2",
@@ -42,7 +40,6 @@
     "katex": "^0.13.24",
     "moment": "^2.30.1",
     "postcss": "^8.4.32",
-    "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
@@ -50,9 +47,8 @@
     "rehype-autolink-headings": "^7.1.0",
     "rehype-highlight": "^7.0.0",
     "rehype-katex": "^7.0.0",
-    "rehype-mathjax": "^6.0.0",
     "rehype-slug": "^6.0.0",
-    "remark-copy-linked-files": "^1.5.0",
+    "remark-emoji": "^4.0.1",
     "remark-external-links": "^9.0.1",
     "remark-gfm": "^3.0.1",
     "remark-math": "^6.0.0",
@@ -63,6 +59,7 @@
     "@types/node": "^20.3.3",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "gh-pages": "^6.1.1",
     "typescript": "^5.1.6"
   }
 }

@@ -2,9 +2,11 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+
     content: [
         `./src/pages/**/*.{js,jsx,ts,tsx}`,
         `./src/components/**/*.{js,jsx,ts,tsx}`,
+        `./posts/**/*.{md,mdx}`,
         'node_modules/flowbite-react/lib/esm/**/*.js'
     ],
     theme: {
@@ -22,7 +24,7 @@ module.exports = {
                 'Inter', '"Noto Sans KR"', '"Noto Sans"',  ...defaultTheme.fontFamily.sans
             ],
             serif: [
-                '"Source Serif 4"', '"Noto Serif KR"', '"Noto Serif"', ...defaultTheme.fontFamily.serif
+                '"Source Serif 4"', '"Noto Sans KR"', '"Noto Serif"', ...defaultTheme.fontFamily.serif
             ],
             body: [
                 'Inter', '"Noto Sans KR"', '"Noto Sans"',  ...defaultTheme.fontFamily.sans
@@ -35,6 +37,6 @@ module.exports = {
     plugins: [
         require('flowbite'),
         require('flowbite/plugin'),
-        require('flowbite-typography')
+        require('flowbite-typography'),
     ],
 }

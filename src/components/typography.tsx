@@ -1,5 +1,6 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
+import {Link} from "gatsby";
 
 const H1 = ({children, className}: { children?: React.ReactNode, className?: string }) =>
     <h1 className={twMerge('text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight', className)}>{children}</h1>
@@ -20,15 +21,15 @@ const H6 = ({children, className}: { children?: React.ReactNode, className?: str
     <h6 className={twMerge('text-lg font-semibold text-gray-900 dark:text-white tracking-tight', className)}>{children}</h6>
 
 const P = ({children, className}: { children?: React.ReactNode, className?: string }) =>
-    <p className={twMerge('text-md text-gray-500 font-serif dark:text-gray-400', className)}>{children}</p>
+    <p className={twMerge('text-md text-gray-500 font-serif dark:text-gray-400 leading-7 mb-2', className)}>{children}</p>
 
 const PFirst = ({children, className}: { children?: React.ReactNode, className?: string }) =>
     <p className={
         twMerge(
         `text-gray-500 dark:text-gray-400 tracking-tight 
-        first-letter:uppercase first-letter:text-5xl first-letter:font-bold 
+        first-letter:uppercase first-letter:text-4xl first-letter:font-bold 
         first-letter:text-gray-900 first-letter:me-3 first-letter:float-start
-        dark:first-letter:text-gray-100 text-md`, className
+        dark:first-letter:text-gray-100 text-md font-serif mb-2 leading-7`, className
         )}>{children}
     </p>
 
@@ -37,10 +38,15 @@ const Span = ({children, className}: { children?: React.ReactNode, className?: s
         twMerge(`text-gray-500 dark:text-gray-400`, className)}>{children}
     </span>
 
-const SLink = ({children, className}: { children?: React.ReactNode, className?: string }) =>
-    <span className={twMerge('font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700', className)}>{children}</span>
+const A = ({children, className, href}: { children?: React.ReactNode, className?: string, href?: string }) =>
+    <a href={href} target='_blank' className={twMerge('font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700 underline', className)}>{children}</a>
 
+const InnerLink = ({children, className, href}: { children?: React.ReactNode, className?: string, href: string }) =>
+    <Link to={href} className={twMerge('font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700 underline', className)}>{children}</Link>
+
+const TextLink = ({children, className}: { children?: React.ReactNode, className?: string }) =>
+    <span className={twMerge('font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700 underline', className)}>{children}</span>
 
 export {
-    H1, H2, H3, H4, H5, H6, P, PFirst, SLink, Span
+    H1, H2, H3, H4, H5, H6, P, PFirst, A, Span, InnerLink, TextLink
 }
