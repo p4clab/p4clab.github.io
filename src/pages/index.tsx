@@ -91,10 +91,13 @@ const Index = ({ data }: PageProps<Queries.IndexPageQuery>) => {
                                     <Span className='text-sm mb-1 leading-none text-gray-400 dark:text-gray-500'>{node.frontmatter?.startDate} - {node.frontmatter?.endDate || "Ongoing"}</Span>
                                     <H6>{node.frontmatter?.title}</H6>
                                     <P className='text-md mb-4'>{node.frontmatter?.description}</P>
-                                    <LinkButton to={node.fields?.sitePath!!}>
-                                        Learn More
-                                        <FaArrowRight className='ml-2 h-3 w-3'/>
-                                    </LinkButton>
+                                    {
+                                        (node.fields?.timeToRead?.words || 0) > 0 &&
+                                        <LinkButton to={node.fields?.sitePath!!}>
+                                            Learn More
+                                            <FaArrowRight className='ml-2 h-3 w-3'/>
+                                        </LinkButton>
+                                    }
                                 </li>
                             )}
                         </ul>
@@ -110,9 +113,9 @@ const Index = ({ data }: PageProps<Queries.IndexPageQuery>) => {
                     {news.nodes.map(node =>
                         <TimelineItem>
                             <TimelinePoint icon={FaCalendar}/>
-                            <TimelineContent>
+                            <TimelineContent className="font-serif">
                                 <TimelineTime>{node.frontmatter?.dateTime}</TimelineTime>
-                                <TimelineTitle>{node.frontmatter?.title}</TimelineTitle>
+                                <TimelineTitle className="font-sans">{node.frontmatter?.title}</TimelineTitle>
                                 <TimelineBody>{node.excerpt}</TimelineBody>
                             </TimelineContent>
                             { (node.fields?.timeToRead?.words || 0) > 150 &&
@@ -158,6 +161,9 @@ export const pageQuery = graphql`
             nodes {
                 fields {
                     sitePath
+                    timeToRead {
+                        words
+                    }
                 }
                 frontmatter {
                     title

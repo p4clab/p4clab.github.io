@@ -18,8 +18,8 @@ const ProjectItem = ({title, funding, startDate, endDate, description, thumbnail
     sitePath: string
 }) => {
     return (
-        <div className="flex p-4 bg-white border border-gray-200 rounded-lg items-start justify-between space-x-6 dark:border-gray-700 dark:bg-gray-800">
-            <div className='space-y-1 text-sm font-serif'>
+        <div className="grid grid-cols-4 p-4 bg-white border border-gray-200 rounded-lg items-start justify-between space-x-6 dark:border-gray-700 dark:bg-gray-800">
+            <div className='space-y-1 text-sm font-serif col-span-4 sm:col-span-3'>
                 <Span className='leading-none text-gray-400 dark:text-gray-500'>
                     {
                         endDate ? `${startDate} - ${endDate}` : `From ${startDate}`
@@ -39,14 +39,14 @@ const ProjectItem = ({title, funding, startDate, endDate, description, thumbnail
                     </LinkButton>
                 }
             </div>
-            <div>
+            <div className='hidden sm:flex'>
                 {
                     thumbnail ? <GatsbyImage
                         alt={title}
                         image={thumbnail}
-                        className='rounded-lg w-48 h-auto'
+                        className='rounded-lg'
                     /> : <StaticImage src='../images/p4c-logo-white.png' alt={title}
-                                      className='rounded-lg w-48 h-auto'/>
+                                      className='rounded-lg'/>
                 }
             </div>
         </div>

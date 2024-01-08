@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public",
+    "deploy": "gatsby build && gh-pages --dist ./public --repo https://github.com/p4clab/p4clab.github.io",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

@@ -23,7 +23,7 @@ const Seo = ({title, description, url, image} : {title?: string, description?: s
                 <meta name='robots' content='index, follow'/>
                 <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
 
-                <title>{title} | {site.siteMetadata.title}</title>
+                <title>{title ? `${title} | ${site.siteMetadata.title}` : `${site.siteMetadata.title}`}</title>
                 <meta property='og:title' content={`${title} | ${site.siteMetadata.title}`}/>
                 <meta property="og:locale" content="en_US"/>
 
