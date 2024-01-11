@@ -22,17 +22,25 @@ description: "This course covers theoretical backgrounds and practical implement
     * 수업 및 과제 관련 내용을 제외한 면담이 필요시 미리 이메일로 연락하여 일정을 잡을 것
 
 ## Textbook
-
+* Primary 
+  * [Ge23] Aurélien Géron. 2023. Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems, 3rd Ed. O`Reilly
+* Secondary
+  * [Oh21] 오일석. 2021. 기계 학습. 한빛 아카데미
+  * [Ow22] Louis Owen. 2022. Hyperparameter Tuning with Python: Boost your machine learning model’s performance via hyperparameter tuning. Packt.
+  * [Br20] Jason Brownlee. 2020. Data Preparation for Machine Learning, 1.1 Ed. Machine Learning Mastery
+  * [Br21] Jason Brownlee. 2021. Imbalanced Classification with Python, 1.3 Ed. Machine Learning Mastery
 ## Prerequisite
 * (필수) 파이선 프로그래밍
-* (선택) 자료 구조, 선형대수학
+* (선택) 자료 구조, 선형 대수학, 데이터 분석 프로그래밍
 
 ## Grading Policy
-- 중간고사: 20%
-- 팀 과제: 40% (3인 1조, 약 14개 팀)
-  - 행동 인식: 데이터 수집/전처리 10% / CV 성능 평가 10% / 테스트 셋 성능 평가 20%
-- 개인 과제: 20%
-  - K-EmoPhone 감정 인식: 테스트 셋 성능 평가 20%
+- 팀 과제 40%: Activity Recognition 데이터 수집 및 학습 모델 검증
+  - 데이터 제출: 10%
+  - ML 성능 평가 30%
+- 개인 과제: 30%
+  - Kaggle Challenge 6회 (각 5%)
+- 중간 고사: 20%
+  - Kaggle Challenge 1회
 - 출석: 10%
   - 지각 3회 = 결석 1회
   - 결석 1회에 출석 점수 1% 차감
@@ -42,65 +50,239 @@ description: "This course covers theoretical backgrounds and practical implement
     - 단, 급하게 벌어진 사유(예. 급병, 친족상 등)는 소명 자료를 제출
 
 # Schedule
-## W01: 과목 개요 / 기계 학습의 역사와 종류
+## W01: Overview
+### March 04: Overview
+* Materials
+  * Lecture
+* References: None
+### March 07: Machine Learning Landscape
+* Reference
+  * [Ge23] Chap. 1
+  * [Oh21] Chap. 1
+* Materials
+  * Lecture
 
-## W02: 기계 학습 파이프라인
-- 강의
-  - 데이터 수집 / 시각화 / 전처리
-  - 특징값 추출 / 시각화 / 선택
-  - 교차 검증 / 성능 지표
-  - 파라미터 튜닝
+## W02: Machine Learning Pipeline
+### March 11: Theory
+* Reference
+  * [Ge23] Chap. 2
+  * D. Sculley et al. 2015. Hidden technical debt in Machine learning systems. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 2 (NIPS'15). MIT Press, Cambridge
+* Materials
+  * Lecture
 
-## W03: 선형 모델과 모델의 훈련
-- 선형 회귀
-- 다차항 회귀
-- Lasso, Ridge, ElasticNet
 
-## W04: 서포트 벡터 머신과 결정 트리
-- SVM
-- Decision Tree
+### March 14: End-to-End Practice
+* Reference
+  * [Ge23] Chap. 3
+* Materials
+  * Lab
+* Assignments
+  * Ind. #1 (- March 20)
 
-## W05: 앙상블 모델
-- Random Fores
-- Gradient Boosted Tree
+## W03: Linear Model
+### March 18: 1st Order Linear Model
+* Reference
+  * [Ge23] Chap. 4
+  * [Oh21] Chap. 2
+* Materials
+  * Lecture
+  * Lab
 
-## W06: 차원 축소와 오버샘플링
-- PCA, Manifold Learning, Embedding
-- SMOTE
+### March 21: Polynomial Model, Regularized Linear Model, and Logistic Regression
+* Reference
+  * [Ge23] Chap. 4
+  * [Oh21] Chap. 2
+* Materials
+  * Lecture
+  * Lab
 
-## W07: 군집화
-- 클러스터링
+## W04: Support Vector Machine and Decision Tree
+### March 25: Support Vector Machine
+* Reference
+  * [Ge23] Chap. 5
+  * [Oh21] Chap. 11
+* Materials
+  * Lecture
+  * Lab
 
-## W08: 중간고사
+### March 28: Decision Tree
+* Reference
+  * [Ge23] Chap. 6
+* Materials
+  * Lecture
+  * Lab
+* Assignments
+  * Ind. #2 (- April 03)
 
-## W09: 신경망
-- 중간고사 풀이
-- 퍼셉트론과 다층 퍼셉트론
+## W05: Ensemble Model
+### April 01: Random Forest
+* Reference
+  * [Ge23] Chap. 7
+  * [Oh21] Chap. 12
+* Materials
+  * Lecture
+  * Lab
 
-## W10: 심층 신경망
-- 다층 퍼셉트론
-- 딥 러닝
+### April 04: Gradient Boosted Tree
+* Reference
+  * [Ge23] Chap. 7
+* Materials
+  * Lecture
+  * Lab
 
-## W11: 합성곱 신경망
-- 합성곱 신경망
-- 관련 이슈
+## W06: Feature Engineering #1
+### April 08: Feature Extraction
+* Reference
+  * Andreas Bulling et al. 2014. A tutorial on human activity recognition using body-worn inertial sensors. ACM Comput. Surv. 46, 3,   Article 33.
+  * Soujanya Poria et al. 2017. A review of affective computing: From unimodal analysis to multimodal fusion. Information Fusion, 37, 98–125.
+* Materials
+  * Lecture
+  * Lab
 
-## W12: 순환 신경망
-- RNN
-- LSTM, GRN
+### April 11: Feature Selection
+* Reference
+  * [Br20] Chap. 4
+* Materials
+  * Lecture
+  * Lab
+* Assignments
+  * Ind. #3 (- April 17)
 
-## W13: 그 외 학습 기법 1
-- 준 지도 학습
-- 자기 지도 학습
-- 전이 학습
+## W07: Feature Engineering #2
+### April 15: Dimensionality Reduction
+* Reference
+  * [Ge23] Chap. 8
+  * [Br20] Chap. 7
+* Materials
+  * Lecture
+  * Lab
 
-## W14: 그 외 학습 기법 2
-- 생성형 AI
-- 능동 학습
-- 강화 학습
+### April 18: Balancing Label Distribution
+* Reference
+  * [Br21] Chap. 4
+* Materials
+  * Lecture
+  * Lab
 
-## W15: 기계 학습과 윤리적 이슈
-- 투명성
-- 설명 가능성
+## W08: Midterm
+* Individual Kaggle Challenge
 
-## W16: 개인/팀 과제 제출
+## W09: Cross-Validation and Hyperparamter Tuning
+### April 29: Cross-Validation
+* Reference
+  * Berrar, D. 2019. Cross-Validation
+* Materials
+  * Lecture
+  * Lab
+* Assignments
+  * Team #1 (- May 12)
+
+### May 02: Hyperparamter Tuning
+* Reference
+  * [Ow22] Chap. 2, 3, 4, 7, 8, 9.
+  * Tong Yu and Hong Zhu. 2000. Hyper-Parameter Optimization: A Review of Algorithms and Applications
+* Materials
+  * Lecture
+  * Lab
+
+## W10: Unsupervised Learning
+### May 06: 어린이날 대체 휴일
+
+### May 09: Clustering
+* References
+  * [Ge23] Chap. 9
+  * [Oh21] Chap. 6
+* Materials
+  * Lecture
+  * Lab
+* Ind. #4 (- May 15)
+
+
+## W11: Artificial Neural Network
+### May 13: Anomaly Detection
+* References
+  * [Ge23] Chap. 9
+  * [Oh21] Chap. 6
+* Materials
+  * Lecture
+  * Lab
+
+### May 16: Artificial Neural Network #1
+* References
+  * [Ge23] Chap. 10
+  * [Oh21] Chap. 3
+* Materials
+  * Lecture
+  * Lab
+
+
+## W12: Deep Neural Network
+### May 20: Artificial Neural Network #1
+* References
+  * [Ge23] Chap. 10
+  * [Oh21] Chap. 3
+* Materials
+  * Lecture
+  * Lab
+* Assignments
+  * Team #2 (- June 20)
+
+### May 23: Deep Neural Network #1
+* References
+  * [Ge23] Chap. 11
+  * [Oh21] Chap. 4, 5
+* Materials
+  * Lecture
+  * Lab
+* Assignments
+  * Ind. #5 (- May 29)
+
+
+## W13: Convolution Neural Network #1
+### May 27: Deep Neural Network #2
+* References
+  * [Ge23] Chap. 11
+  * [Oh21] Chap. 4, 5
+* Materials
+  * Lecture
+  * Lab
+
+### May 30: Convolution Neural Network #1
+* References
+  * [Ge23] Chap. 14
+  * [Oh21] Chap. 4
+* Materials
+  * Lecture
+  * Lab
+
+## W14: Convolution Neural Network #2
+### June 03: Convolution Neural Network #2
+* References
+  * [Ge23] Chap. 14
+  * [Oh21] Chap. 4
+* Materials
+  * Lecture
+  * Lab
+* Assignments
+  * Ind. #6 (- June 12)
+### June 06: 현충일
+
+## W15: Recurrent Neural Network
+### June 10: Recurrent Neural Network #1
+* References
+  * [Ge23] Chap. 15
+  * [Oh21] Chap. 8
+* Materials
+  * Lecture
+  * Lab
+
+### June 13: Recurrent Neural Network #2
+* References
+  * [Ge23] Chap. 15
+  * [Oh21] Chap. 8
+* Materials
+  * Lecture
+  * Lab
+
+## W16: Final Term
+* Team Project
