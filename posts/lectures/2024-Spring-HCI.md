@@ -25,12 +25,12 @@ description: "This course aims to provide broad knowledge about interaction desi
 ## Textbook
 
 ## Prerequisite
-* (선택) 웹 프로그래밍, 모바일 프로그래밍, 데이터베이스 등
+* (선택) 웹 프로그래밍, 모바일 프로그래밍, 데이터베이스
 
 ## Grading Policy
-- 중간고사: 20%
-- 팀 과제: 40% (3인 1조, 약 14개 팀)
-- 수업 내 활동: 20%
+- 수시 시험: 25%
+- 팀 과제: 60% (3인 1조, 약 14개 팀)
+- 수업 내 활동: 10%
 - 출석: 10%
   - 지각 3회 = 결석 1회
   - 결석 1회에 출석 점수 1% 차감
@@ -38,3 +38,69 @@ description: "This course aims to provide broad knowledge about interaction desi
     - 즉, 11회 이상 결석 시 F
   - 별도의 사유(예. 예비군 훈련 등)가 있을 시 수업 시간 전에 교수 및 조교에게 이메일 송부
     - 단, 급하게 벌어진 사유(예. 급병, 친족상 등)는 소명 자료를 제출
+
+
+# Schedule
+## W01: Overview
+### March 04: Course Overview
+### March 07: Introduction to HCI
+
+## W02: Need Finding
+### March 11: Need Finding
+### March 14
+
+## W03: Learnability #1
+### March 18
+### March 21
+
+## W04: Ideation
+### March 25
+### March 28
+
+## W05: Learnability #2
+### April 01
+### April 04
+
+## W06: Efficiency
+### April 08
+### April 11
+
+## W07: Paper Prototyping
+### April 15
+### April 18
+
+## W08: Midterm
+### April 22
+### April 25
+
+## W09: Digital Prototyping
+### April 29
+### May 02
+
+## W10: Safety and Error
+### May 06: 어린이날 대체 휴일
+### May 09
+
+## W11: Aesthetics
+### May 13
+### May 16
+
+## W12: Heuristic Evaluation
+### May 20
+### May 23
+
+## W13: User Testing
+### May 27
+### May 30
+
+## W14: Accessibility
+### June 03
+### June 06: 현충일
+
+## W15: 
+### June 10
+### June 13
+
+## W16: Final Term
+### June 17
+### June 20
