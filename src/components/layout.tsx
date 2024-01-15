@@ -8,7 +8,7 @@ import {MdAnnouncement, MdOutlineAlternateEmail} from "react-icons/md";
 import {SiResearchgate, SiGooglescholar} from "react-icons/si";
 import {StaticImage} from "gatsby-plugin-image";
 import {H4, H6, InnerLink, P, Span,} from "./typography";
-import { initFlowbite } from 'flowbite'
+import {initFlowbite } from 'flowbite'
 import {useEffect} from "react";
 import {HiX} from "react-icons/hi";
 

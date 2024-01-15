@@ -16,10 +16,10 @@ description: "This course covers theoretical backgrounds and practical implement
 * 월/목요일 12:00 - 13:45, 공학 6호관 608호
 
 ## Office Hours
-* 화요일 13:00 - 15:00
+* 일시/장소: 화요일 13:00 - 15:00, 공학 6호관 407호
 * 주의 사항
-    * 수업 및 과제 관련 내용은 면담 대신 e루리 질의 응답 게시판에 올려서 모든 학생이 공유할 수 있도록 할 것
-    * 수업 및 과제 관련 내용을 제외한 면담이 필요시 미리 이메일로 연락하여 일정을 잡을 것
+  * 수업 및 과제 관련 내용 질의/응답은 면담 대신 e루리 질의 응답 게시판을 이용
+  * 면담 1일전 미리 이메일 연락 등을 통해 일정을 잡을 것
 
 ## Textbook
 * Primary 
@@ -29,19 +29,25 @@ description: "This course covers theoretical backgrounds and practical implement
   * [Ow22] Louis Owen. 2022. Hyperparameter Tuning with Python: Boost your machine learning model’s performance via hyperparameter tuning. Packt.
   * [Br20] Jason Brownlee. 2020. Data Preparation for Machine Learning, 1.1 Ed. Machine Learning Mastery
   * [Br21] Jason Brownlee. 2021. Imbalanced Classification with Python, 1.3 Ed. Machine Learning Mastery
+
 ## Prerequisite
-* (필수) 파이선 프로그래밍
-* (선택) 자료 구조, 선형 대수학, 데이터 분석 프로그래밍
+* (필수) 파이썬프로그래밍
+  * 파이썬 사용법 및 Numpy/Pandas 라이브러리 사용법은 숙지된 상태라고 가정하고 수업을 진행
+* (선택) 자료구조, 선형대수학, 데이터분석프로그래밍
 
 ## Grading Policy
-- 팀 과제 40%: Activity Recognition 데이터 수집 및 학습 모델 검증
-  - 데이터 제출: 10%
-  - ML 성능 평가 30%
-- 개인 과제: 30%
-  - Kaggle Challenge 6회 (각 5%)
-- 중간 고사: 20%
-  - Kaggle Challenge 1회
-- 출석: 10%
+- 팀 과제 (30%): ML End-to-End Practice for Human Activity Recognition
+  - #1 (10%): Data collection, preprocessing, and annotation for HAR
+  - #2 (20%): Model building and evaluation for HAR
+- 개인 과제 (40%): Kaggle Challenges
+  - #1 (8%): Housing
+  - #2 (8%): Wine Quality
+  - #3 (8%): Student Dropout or Success
+  - #4 (8%): Nurse Stress Prediction using Wearable Sensors
+  - #5 (8%): Doom or Animal Crossing
+- 중간 과제 (20%): Kaggle Challenges
+  - Young Adult's Affective Data - ECG and GSR Signals
+- 출석 (10%)
   - 지각 3회 = 결석 1회
   - 결석 1회에 출석 점수 1% 차감
   - 총 수업 일의 1/3 (10회) 초과 결석 시 F
@@ -56,233 +62,257 @@ description: "This course covers theoretical backgrounds and practical implement
   * Lecture
 * References: None
 ### March 07: Machine Learning Landscape
+* Materials
+  * Lecture
 * Reference
   * [Ge23] Chap. 1
   * [Oh21] Chap. 1
-* Materials
-  * Lecture
+
+---
 
 ## W02: Machine Learning Pipeline
-### March 11: Theory
-* Reference
-  * [Ge23] Chap. 2
-  * D. Sculley et al. 2015. Hidden technical debt in Machine learning systems. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 2 (NIPS'15). MIT Press, Cambridge
+### March 11: Machine Learning Pipeline - Theory
 * Materials
   * Lecture
-
-
-### March 14: End-to-End Practice
 * Reference
-  * [Ge23] Chap. 3
+  * [Ge23] Chap. 2
+  * D. Sculley et al. 2015. Hidden technical debt in Machine learning systems. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 2 (NIPS'15). 
+  * Soowon Kang et al. 2023. K-EmoPhone: A Mobile and Wearable Dataset with In-Situ Emotion, Stress, and Attention Labels. Sci Data 10, 351 (2023). 
+
+### March 14: Machine Learning Pipeline - End-to-End Practice
 * Materials
   * Lab
 * Assignments
-  * Ind. #1 (- March 20)
+  * Ind. #1 (- March 20): End-to-End Practice for the Housing Dataset
+* Reference
+  * [Ge23] Chap. 3
+
+---
 
 ## W03: Linear Model
 ### March 18: 1st Order Linear Model
-* Reference
-  * [Ge23] Chap. 4
-  * [Oh21] Chap. 2
 * Materials
   * Lecture
   * Lab
+* Reference
+  * [Ge23] Chap. 4
+  * [Oh21] Chap. 2
 
 ### March 21: Polynomial Model, Regularized Linear Model, and Logistic Regression
-* Reference
-  * [Ge23] Chap. 4
-  * [Oh21] Chap. 2
 * Materials
   * Lecture
   * Lab
+* Reference
+  * [Ge23] Chap. 4
+  * [Oh21] Chap. 2
+
+---
 
 ## W04: Support Vector Machine and Decision Tree
 ### March 25: Support Vector Machine
+* Materials
+  * Lecture
+  * Lab
 * Reference
   * [Ge23] Chap. 5
   * [Oh21] Chap. 11
-* Materials
-  * Lecture
-  * Lab
 
 ### March 28: Decision Tree
-* Reference
-  * [Ge23] Chap. 6
 * Materials
   * Lecture
   * Lab
 * Assignments
-  * Ind. #2 (- April 03)
+  * Ind. #2 (- April 03): Wine Quality
+* Reference
+  * [Ge23] Chap. 6
+
+---
 
 ## W05: Ensemble Model
 ### April 01: Random Forest
+* Materials
+  * Lecture
+  * Lab
 * Reference
   * [Ge23] Chap. 7
   * [Oh21] Chap. 12
-* Materials
-  * Lecture
-  * Lab
 
 ### April 04: Gradient Boosted Tree
-* Reference
-  * [Ge23] Chap. 7
 * Materials
   * Lecture
   * Lab
+* Reference
+  * [Ge23] Chap. 7
+
+---
 
 ## W06: Feature Engineering #1
 ### April 08: Feature Extraction
+* Materials
+  * Lecture
+  * Lab
 * Reference
   * Andreas Bulling et al. 2014. A tutorial on human activity recognition using body-worn inertial sensors. ACM Comput. Surv. 46, 3,   Article 33.
   * Soujanya Poria et al. 2017. A review of affective computing: From unimodal analysis to multimodal fusion. Information Fusion, 37, 98–125.
-* Materials
-  * Lecture
-  * Lab
 
 ### April 11: Feature Selection
-* Reference
-  * [Br20] Chap. 4
 * Materials
   * Lecture
   * Lab
 * Assignments
-  * Ind. #3 (- April 17)
+  * Ind. #3 (- April 17): Student Dropout vs. Success
+* Reference
+  * [Br20] Chap. 4
+
+---
 
 ## W07: Feature Engineering #2
 ### April 15: Dimensionality Reduction
+* Materials
+  * Lecture
+  * Lab
 * Reference
   * [Ge23] Chap. 8
   * [Br20] Chap. 7
-* Materials
-  * Lecture
-  * Lab
 
 ### April 18: Balancing Label Distribution
-* Reference
-  * [Br21] Chap. 4
 * Materials
   * Lecture
   * Lab
+* Reference
+  * [Br21] Chap. 4
+---
 
 ## W08: Midterm
-* Individual Kaggle Challenge
+* Midterm Assignment (April 22 - April 28): Young Adult's Affective Data - ECG and GSR Signals
+---
 
-## W09: Cross-Validation and Hyperparamter Tuning
+## W09: Cross-Validation and Hyper-parameter Tuning
 ### April 29: Cross-Validation
-* Reference
-  * Berrar, D. 2019. Cross-Validation
 * Materials
   * Lecture
   * Lab
 * Assignments
-  * Team #1 (- May 12)
-
-### May 02: Hyperparamter Tuning
+  * Team #1 (- May 12): Data Collection, Preprocessing, and Annotation for HAR  
 * Reference
-  * [Ow22] Chap. 2, 3, 4, 7, 8, 9.
-  * Tong Yu and Hong Zhu. 2000. Hyper-Parameter Optimization: A Review of Algorithms and Applications
+  * Berrar, D. 2019. Cross-Validation
+  * HAPT Dataset?
+
+### May 02: Hyper-parameter Tuning
 * Materials
   * Lecture
   * Lab
+* Reference
+  * [Ow22] Chap. 2, 3, 4, 7, 8, 9.
+  * Tong Yu and Hong Zhu. 2000. Hyper-Parameter Optimization: A Review of Algorithms and Applications
+---
 
 ## W10: Unsupervised Learning
 ### May 06: 어린이날 대체 휴일
 
 ### May 09: Clustering
-* References
-  * [Ge23] Chap. 9
-  * [Oh21] Chap. 6
 * Materials
   * Lecture
   * Lab
-* Ind. #4 (- May 15)
+* References
+  * [Ge23] Chap. 9
+  * [Oh21] Chap. 6
 
+---
 
 ## W11: Artificial Neural Network
 ### May 13: Anomaly Detection
+* Materials
+  * Lecture
+  * Lab
 * References
   * [Ge23] Chap. 9
   * [Oh21] Chap. 6
-* Materials
-  * Lecture
-  * Lab
 
 ### May 16: Artificial Neural Network #1
-* References
-  * [Ge23] Chap. 10
-  * [Oh21] Chap. 3
 * Materials
   * Lecture
   * Lab
-
-
-## W12: Deep Neural Network
-### May 20: Artificial Neural Network #1
 * References
   * [Ge23] Chap. 10
   * [Oh21] Chap. 3
+
+---
+
+## W12: Deep Neural Network
+### May 20: Artificial Neural Network #2
 * Materials
   * Lecture
   * Lab
 * Assignments
-  * Team #2 (- June 20)
+  * Team #2 (- June 20): Model Building and Evaluation for HAR
+  * Ind. #4 (- June 02): Nurse Stress Prediction using Wearable Sensors
+* References
+  * [Ge23] Chap. 10
+  * [Oh21] Chap. 3
 
 ### May 23: Deep Neural Network #1
+* Materials
+  * Lecture
+  * Lab
 * References
   * [Ge23] Chap. 11
   * [Oh21] Chap. 4, 5
-* Materials
-  * Lecture
-  * Lab
-* Assignments
-  * Ind. #5 (- May 29)
 
+---
 
 ## W13: Convolution Neural Network #1
 ### May 27: Deep Neural Network #2
+* Materials
+  * Lecture
+  * Lab
 * References
   * [Ge23] Chap. 11
   * [Oh21] Chap. 4, 5
+
+### May 30: Convolution Neural Network #1
 * Materials
   * Lecture
   * Lab
-
-### May 30: Convolution Neural Network #1
 * References
   * [Ge23] Chap. 14
   * [Oh21] Chap. 4
-* Materials
-  * Lecture
-  * Lab
+
+---
 
 ## W14: Convolution Neural Network #2
 ### June 03: Convolution Neural Network #2
-* References
-  * [Ge23] Chap. 14
-  * [Oh21] Chap. 4
 * Materials
   * Lecture
   * Lab
 * Assignments
-  * Ind. #6 (- June 12)
+  * Ind. #5 (- June 12): Doom or Animal Crossing?
+* References
+  * [Ge23] Chap. 14
+  * [Oh21] Chap. 4
+
 ### June 06: 현충일
+
+---
 
 ## W15: Recurrent Neural Network
 ### June 10: Recurrent Neural Network #1
-* References
-  * [Ge23] Chap. 15
-  * [Oh21] Chap. 8
 * Materials
   * Lecture
   * Lab
-
+* References
+  * [Ge23] Chap. 15
+  * [Oh21] Chap. 8
+  
 ### June 13: Recurrent Neural Network #2
-* References
-  * [Ge23] Chap. 15
-  * [Oh21] Chap. 8
 * Materials
   * Lecture
   * Lab
+* References
+  * [Ge23] Chap. 15
+  * [Oh21] Chap. 8
+
+---
 
 ## W16: Final Term
-* Team Project
+* 
