@@ -36,18 +36,23 @@ description: "This course covers theoretical backgrounds and practical implement
 * (선택) 자료구조, 선형대수학, 데이터분석프로그래밍
 
 ## Grading Policy
-- 팀 과제 (30%): ML End-to-End Practice for Human Activity Recognition
+### 팀 프로젝트Team Project (30%)
+- End-to-End Machine Learning Projects for Human Activity Recognition
   - #1 (10%): Data collection, preprocessing, and annotation for HAR
   - #2 (20%): Model building and evaluation for HAR
-- 개인 과제 (40%): Kaggle Challenges
+
+### 개인 과제Assignments (40%)
+- Kaggle ML Competition
   - #1 (8%): Housing
   - #2 (8%): Wine Quality
   - #3 (8%): Student Dropout or Success
   - #4 (8%): Nurse Stress Prediction using Wearable Sensors
   - #5 (8%): Doom or Animal Crossing
-- 중간 과제 (20%): Kaggle Challenges
-  - Young Adult's Affective Data - ECG and GSR Signals
-- 출석 (10%)
+  
+### 중간 과제Midterm Assignment (20%)
+  - Kaggle ML Competition: Young Adult's Affective Data - ECG and GSR Signals
+
+### 출석Attendance (10%)
   - 지각 3회 = 결석 1회
   - 결석 1회에 출석 점수 1% 차감
   - 총 수업 일의 1/3 (10회) 초과 결석 시 F
@@ -58,12 +63,10 @@ description: "This course covers theoretical backgrounds and practical implement
 # Schedule
 ## W01: Overview
 ### March 04: Overview
-* Materials
-  * Lecture
+* Lecture
 * References: None
 ### March 07: Machine Learning Landscape
-* Materials
-  * Lecture
+* Lecture
 * Reference
   * [Ge23] Chap. 1
   * [Oh21] Chap. 1
@@ -72,18 +75,15 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ## W02: Machine Learning Pipeline
 ### March 11: Machine Learning Pipeline - Theory
-* Materials
-  * Lecture
+* Lecture
 * Reference
   * [Ge23] Chap. 2
   * D. Sculley et al. 2015. Hidden technical debt in Machine learning systems. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 2 (NIPS'15). 
   * Soowon Kang et al. 2023. K-EmoPhone: A Mobile and Wearable Dataset with In-Situ Emotion, Stress, and Attention Labels. Sci Data 10, 351 (2023). 
 
 ### March 14: Machine Learning Pipeline - End-to-End Practice
-* Materials
-  * Lab
-* Assignments
-  * Ind. #1 (- March 20): End-to-End Practice for the Housing Dataset
+* Lab
+* Assignment #1 (- March 20): End-to-End Practice for the Housing Dataset
 * Reference
   * [Ge23] Chap. 3
 
@@ -91,17 +91,15 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ## W03: Linear Model
 ### March 18: 1st Order Linear Model
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * Reference
   * [Ge23] Chap. 4
   * [Oh21] Chap. 2
 
 ### March 21: Polynomial Model, Regularized Linear Model, and Logistic Regression
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * Reference
   * [Ge23] Chap. 4
   * [Oh21] Chap. 2
@@ -110,19 +108,16 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ## W04: Support Vector Machine and Decision Tree
 ### March 25: Support Vector Machine
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * Reference
   * [Ge23] Chap. 5
   * [Oh21] Chap. 11
 
 ### March 28: Decision Tree
-* Materials
-  * Lecture
-  * Lab
-* Assignments
-  * Ind. #2 (- April 03): Wine Quality
+* Lecture
+* Lab
+* Assignment #2 (- April 03): Wine Quality
 * Reference
   * [Ge23] Chap. 6
 
@@ -130,17 +125,15 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ## W05: Ensemble Model
 ### April 01: Random Forest
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * Reference
   * [Ge23] Chap. 7
   * [Oh21] Chap. 12
 
 ### April 04: Gradient Boosted Tree
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * Reference
   * [Ge23] Chap. 7
 
@@ -148,37 +141,31 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ## W06: Feature Engineering #1
 ### April 08: Feature Extraction
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * Reference
   * Andreas Bulling et al. 2014. A tutorial on human activity recognition using body-worn inertial sensors. ACM Comput. Surv. 46, 3,   Article 33.
   * Soujanya Poria et al. 2017. A review of affective computing: From unimodal analysis to multimodal fusion. Information Fusion, 37, 98–125.
 
 ### April 11: Feature Selection
-* Materials
-  * Lecture
-  * Lab
-* Assignments
-  * Ind. #3 (- April 17): Student Dropout vs. Success
+* Lecture
+* Lab
+* Assignment #3 (- April 17): Student Dropout vs. Success
 * Reference
   * [Br20] Chap. 4
 
 ---
-
 ## W07: Feature Engineering #2
 ### April 15: Dimensionality Reduction
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * Reference
   * [Ge23] Chap. 8
   * [Br20] Chap. 7
 
 ### April 18: Balancing Label Distribution
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * Reference
   * [Br21] Chap. 4
 ---
@@ -189,19 +176,16 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ## W09: Cross-Validation and Hyper-parameter Tuning
 ### April 29: Cross-Validation
-* Materials
-  * Lecture
-  * Lab
-* Assignments
-  * Team #1 (- May 12): Data Collection, Preprocessing, and Annotation for HAR  
+* Lecture
+* Lab
+* Team Assignment #1 (- May 12): Data Collection, Preprocessing, and Annotation for HAR  
 * Reference
   * Berrar, D. 2019. Cross-Validation
   * HAPT Dataset?
 
 ### May 02: Hyper-parameter Tuning
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * Reference
   * [Ow22] Chap. 2, 3, 4, 7, 8, 9.
   * Tong Yu and Hong Zhu. 2000. Hyper-Parameter Optimization: A Review of Algorithms and Applications
@@ -211,9 +195,8 @@ description: "This course covers theoretical backgrounds and practical implement
 ### May 06: 어린이날 대체 휴일
 
 ### May 09: Clustering
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * References
   * [Ge23] Chap. 9
   * [Oh21] Chap. 6
@@ -222,17 +205,15 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ## W11: Artificial Neural Network
 ### May 13: Anomaly Detection
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * References
   * [Ge23] Chap. 9
   * [Oh21] Chap. 6
 
 ### May 16: Artificial Neural Network #1
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * References
   * [Ge23] Chap. 10
   * [Oh21] Chap. 3
@@ -241,20 +222,17 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ## W12: Deep Neural Network
 ### May 20: Artificial Neural Network #2
-* Materials
-  * Lecture
-  * Lab
-* Assignments
-  * Team #2 (- June 20): Model Building and Evaluation for HAR
-  * Ind. #4 (- June 02): Nurse Stress Prediction using Wearable Sensors
+* Lecture
+* Lab
+* Team Assignment #2 (- June 20): Model Building and Evaluation for HAR
+* Assignment #4 (- June 02): Nurse Stress Prediction using Wearable Sensors
 * References
   * [Ge23] Chap. 10
   * [Oh21] Chap. 3
 
 ### May 23: Deep Neural Network #1
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * References
   * [Ge23] Chap. 11
   * [Oh21] Chap. 4, 5
@@ -263,17 +241,15 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ## W13: Convolution Neural Network #1
 ### May 27: Deep Neural Network #2
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * References
   * [Ge23] Chap. 11
   * [Oh21] Chap. 4, 5
 
 ### May 30: Convolution Neural Network #1
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * References
   * [Ge23] Chap. 14
   * [Oh21] Chap. 4
@@ -282,11 +258,9 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ## W14: Convolution Neural Network #2
 ### June 03: Convolution Neural Network #2
-* Materials
-  * Lecture
-  * Lab
-* Assignments
-  * Ind. #5 (- June 12): Doom or Animal Crossing?
+* Lecture
+* Lab
+* Assignment #5 (- June 12): Doom or Animal Crossing?
 * References
   * [Ge23] Chap. 14
   * [Oh21] Chap. 4
@@ -297,17 +271,15 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ## W15: Recurrent Neural Network
 ### June 10: Recurrent Neural Network #1
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * References
   * [Ge23] Chap. 15
   * [Oh21] Chap. 8
   
 ### June 13: Recurrent Neural Network #2
-* Materials
-  * Lecture
-  * Lab
+* Lecture
+* Lab
 * References
   * [Ge23] Chap. 15
   * [Oh21] Chap. 8
@@ -315,4 +287,4 @@ description: "This course covers theoretical backgrounds and practical implement
 ---
 
 ## W16: Final Term
-* 
+* No exam. Team Assignment #2 should be submitted in this week.
