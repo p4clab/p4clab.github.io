@@ -190,7 +190,7 @@ description: "This course aims to provide broad knowledge about interaction desi
 * (Announce) DP #6 - User Testing
   * Due: June 10
 
-### June 06: Memorial Day
+### June 06: Holiday - Memorial Day
 * No class
 
 ---
