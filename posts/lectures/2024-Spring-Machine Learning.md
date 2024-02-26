@@ -43,11 +43,11 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ### 개인 과제Assignments (40%)
 - Kaggle ML Competition
-  - #1 (8%): Housing
-  - #2 (8%): Wine Quality
-  - #3 (8%): Student Dropout or Success
-  - #4 (8%): Nurse Stress Prediction using Wearable Sensors
-  - #5 (8%): Doom or Animal Crossing
+  - #1 (4%): Housing
+  - #2 (9%): Wine Quality
+  - #3 (9%): Student Dropout or Success
+  - #4 (9%): Nurse Stress Prediction using Wearable Sensors
+  - #5 (9%): Doom or Animal Crossing
   
 ### 중간 과제Midterm Assignment (20%)
   - Kaggle ML Competition: Young Adult's Affective Data - ECG and GSR Signals
@@ -83,7 +83,8 @@ description: "This course covers theoretical backgrounds and practical implement
 
 ### March 14: Machine Learning Pipeline - End-to-End Practice
 * Lab
-* Assignment #1 (- March 20): End-to-End Practice for the Housing Dataset
+* Assignment #1: End-to-End Practice for the Housing Dataset
+  * Due: March 20
 * Reference
   * [Ge23] Chap. 3
 
@@ -117,7 +118,8 @@ description: "This course covers theoretical backgrounds and practical implement
 ### March 28: Decision Tree
 * Lecture
 * Lab
-* Assignment #2 (- April 03): Wine Quality
+* Assignment #2: Wine Quality
+  * Due: April 03
 * Reference
   * [Ge23] Chap. 6
 
@@ -150,7 +152,8 @@ description: "This course covers theoretical backgrounds and practical implement
 ### April 11: Feature Selection
 * Lecture
 * Lab
-* Assignment #3 (- April 17): Student Dropout vs. Success
+* Assignment #3: Student Dropout vs. Success 
+  * Due: April 17
 * Reference
   * [Br20] Chap. 4
 
@@ -178,7 +181,8 @@ description: "This course covers theoretical backgrounds and practical implement
 ### April 29: Cross-Validation
 * Lecture
 * Lab
-* Team Assignment #1 (- May 12): Data Collection, Preprocessing, and Annotation for HAR  
+* Team Assignment #1: Data Collection, Preprocessing, and Annotation for HAR
+  * Due: May 12
 * Reference
   * Berrar, D. 2019. Cross-Validation
   * HAPT Dataset?
@@ -192,7 +196,8 @@ description: "This course covers theoretical backgrounds and practical implement
 ---
 
 ## W10: Unsupervised Learning
-### May 06: 어린이날 대체 휴일
+### May 06: Substitution Holiday for Children's Day
+* No class
 
 ### May 09: Clustering
 * Lecture
@@ -224,8 +229,8 @@ description: "This course covers theoretical backgrounds and practical implement
 ### May 20: Artificial Neural Network #2
 * Lecture
 * Lab
-* Team Assignment #2 (- June 20): Model Building and Evaluation for HAR
-* Assignment #4 (- June 02): Nurse Stress Prediction using Wearable Sensors
+* Assignment #4: Nurse Stress Prediction using Wearable Sensors
+  * Due: June 02
 * References
   * [Ge23] Chap. 10
   * [Oh21] Chap. 3
@@ -243,6 +248,8 @@ description: "This course covers theoretical backgrounds and practical implement
 ### May 27: Deep Neural Network #2
 * Lecture
 * Lab
+* Team Assignment #2: Model Building and Evaluation for HAR
+  * Due: June 20
 * References
   * [Ge23] Chap. 11
   * [Oh21] Chap. 4, 5
@@ -260,12 +267,14 @@ description: "This course covers theoretical backgrounds and practical implement
 ### June 03: Convolution Neural Network #2
 * Lecture
 * Lab
-* Assignment #5 (- June 12): Doom or Animal Crossing?
+* Assignment #5: Doom or Animal Crossing?
+  * Due: June 12
 * References
   * [Ge23] Chap. 14
   * [Oh21] Chap. 4
 
-### June 06: 현충일
+### June 06: Memorial Day
+* No class
 
 ---
 
