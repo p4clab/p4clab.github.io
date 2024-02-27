@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,4 +14,4 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
-          gatsby-args: --prefix-paths
+          skip-publish: false
